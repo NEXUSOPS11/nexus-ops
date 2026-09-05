@@ -4,10 +4,10 @@
 */
 window.NEXUS_CONFIG = {
   // NEXUS OPS 봇 초대 링크
-  botInviteUrl: "https://discord.com/oauth2/authorize?client_id=YOUR_BOT_CLIENT_ID",
+  botInviteUrl: "https://discord.com/oauth2/authorize?client_id=1545449496463278171",
 
   // NEXUS OPS 공식 Discord 서버 / 구매문의 링크
-  discordSupportUrl: "https://discord.gg/YOUR_INVITE_CODE",
+  discordSupportUrl: "https://discord.gg/AkTZTxGcg",
 
   brandName: "NEXUS OPS"
 };
