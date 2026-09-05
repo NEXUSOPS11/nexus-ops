@@ -126,7 +126,7 @@
             <button class="btn btn-secondary buy-btn">365일 구매하기</button>
           </article>
         </div>
-        <p class="pricing-note reveal">* 결제 확인 후 라이선스 키가 발급됩니다. 라이선스는 서버 관리자가 <code>/license</code>로 활성화합니다.</p>
+        <p class="pricing-note reveal">* 카카오뱅크 계좌정보는 공개 페이지에 표시하지 않습니다. 구매문의에서 안내 후 입금 확인이 되면 라이선스 키가 발급됩니다.</p>
       </div>
     </section>
 
@@ -137,7 +137,7 @@
         <div class="steps">
           <div><b>01</b><span><strong>플랜 선택</strong><small>30일, 90일, 365일 중 선택</small></span></div>
           <div><b>02</b><span><strong>주문 정보 입력</strong><small>Discord 계정과 적용할 서버 정보 입력</small></span></div>
-          <div><b>03</b><span><strong>결제 및 확인</strong><small>구매 문의에서 안내받은 방식으로 결제</small></span></div>
+          <div><b>03</b><span><strong>카카오뱅크 입금</strong><small>구매문의에서 계좌 안내를 받은 뒤 송금</small></span></div>
           <div><b>04</b><span><strong>라이선스 활성화</strong><small>발급된 키를 서버 관리자가 /license로 등록</small></span></div>
         </div>
       </div>
@@ -159,7 +159,8 @@ NXO-••••-••••-••••
         <details class="reveal"><summary>PRO는 개인 계정에 적용되나요?</summary><p>아니요. NEXUS OPS PRO는 Discord 서버 1개 단위로 적용됩니다. 서버 관리자가 활성화하면 해당 서버의 멤버들이 각 권한에 맞는 PRO 기능을 사용할 수 있습니다.</p></details>
         <details class="reveal"><summary>기간이 끝나면 서버 데이터가 삭제되나요?</summary><p>아니요. PRO 기간이 끝나면 서버가 FREE 플랜으로 전환됩니다.</p></details>
         <details class="reveal"><summary>일반 멤버도 관리자용 PRO 기능을 사용할 수 있나요?</summary><p>아니요. PRO 서버라도 관리자/운영진 전용 기능은 Discord 권한에 따라 제한됩니다.</p></details>
-        <details class="reveal"><summary>구매 후 바로 사용할 수 있나요?</summary><p>결제 확인 후 발급된 라이선스 키를 서버 관리자가 <code>/license</code>로 활성화하면 사용할 수 있습니다.</p></details>
+        <details class="reveal"><summary>구매 후 바로 사용할 수 있나요?</summary><p>구매문의에서 카카오뱅크 입금 확인 후 라이선스 키가 발급됩니다. 서버 관리자가 <code>/license</code>로 활성화하면 바로 PRO를 사용할 수 있습니다.</p></details>
+        <details class="reveal"><summary>카카오뱅크 계좌번호는 어디서 확인하나요?</summary><p>보안을 위해 공개 구매 페이지에는 계좌정보를 표시하지 않습니다. 주문서를 만든 뒤 공식 Discord 구매문의에서 주문번호를 전달하면 입금 정보를 안내받을 수 있습니다.</p></details>
       </div>
     </section>
 
@@ -177,11 +178,12 @@ NXO-••••-••••-••••
     <div class="modal-backdrop" data-close></div>
     <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <button class="modal-close" data-close aria-label="닫기">×</button>
-      <div class="modal-head"><span class="kicker">PRO ORDER</span><h2 id="modalTitle">PRO 구매 신청</h2><p>주문서를 만들고 Discord 구매문의에서 전달해주세요.</p></div>
+      <div class="modal-head"><span class="kicker">PRO ORDER</span><h2 id="modalTitle">PRO 구매 신청</h2><p>주문서를 만든 뒤 Discord 구매문의에서 카카오뱅크 입금 안내를 받아주세요.</p></div>
       <form id="orderForm">
         <div class="selected-plan"><span id="selectedPlan">PRO 90일</span><b id="selectedPrice">₩12,900</b></div>
         <label>Discord 사용자명<input id="discordName" required maxlength="80" placeholder="예: nexus_user" /></label>
         <label>적용할 서버 이름<input id="serverName" required maxlength="100" placeholder="예: NEXUS Community" /></label>
+        <label>입금자명<input id="depositorName" required maxlength="40" placeholder="예: 홍길동" /></label>
         <label>Discord 서버 ID <span class="optional">선택</span><input id="serverId" inputmode="numeric" maxlength="30" placeholder="예: 123456789012345678" /></label>
         <label class="agree"><input type="checkbox" id="agree" required /><span>PRO는 Discord 서버 1개에 적용되며, 라이선스 키를 공개하지 않겠습니다.</span></label>
         <button class="btn btn-primary full" type="submit">주문서 만들기</button>
