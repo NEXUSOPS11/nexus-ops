@@ -31,6 +31,7 @@ form.addEventListener('submit',e=>{
   e.preventDefault();
   const discordName=document.getElementById('discordName').value.trim();
   const serverName=document.getElementById('serverName').value.trim();
+  const depositorName=document.getElementById('depositorName').value.trim();
   const serverId=document.getElementById('serverId').value.trim();
   const now=new Date();
   const stamp=`${String(now.getFullYear()).slice(-2)}${String(now.getMonth()+1).padStart(2,'0')}${String(now.getDate()).padStart(2,'0')}`;
@@ -44,9 +45,10 @@ form.addEventListener('submit',e=>{
     `금액: ₩${won(current.price)}`,
     `Discord: ${discordName}`,
     `적용 서버: ${serverName}`,
+    `입금자명: ${depositorName}`,
     `서버 ID: ${serverId || '미입력'}`,
     '',
-    '결제 안내를 부탁드립니다.'
+    '카카오뱅크 입금 계좌 안내를 부탁드립니다.'
   ].join('\n');
   form.hidden=true; result.hidden=false;
 });
